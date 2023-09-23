@@ -1,5 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
         <RootNamespace>POS</RootNamespace>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
+    </ItemGroup>
 </Project>

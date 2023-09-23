@@ -1,12 +1,15 @@
 using Microsoft.EntityFrameworkCore;
+using POS.Models;
 
 namespace POS.Data;
 
-public interface IDbContext : DbContext
+public class IDbContext : DbContext
 {
-    IDbContext AsNew();
-    
-    EntityEntry Entry(object entry);
-    DatabaseFacade Database { get; }
+    public IDbContext(DbContextOptions<IDbContext> options)
+        :base(options)
+    {
 
+    }
+
+    public DbSet<Issue> Issues { get; set; }
 }
