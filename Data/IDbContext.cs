@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using POS.Models;
 
@@ -8,7 +9,7 @@ public class IDbContext : DbContext
     public IDbContext(DbContextOptions<IDbContext> options)
         :base(options)
     {
-        console.WriteLine("test");
+        Console.WriteLine("test");
     }
 
     public DbSet<Issue> Issues { get; set; }
